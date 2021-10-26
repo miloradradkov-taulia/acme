@@ -18,3 +18,4 @@ secretName: ""
 issuer:
   enabled: false
   cluster: false
+  preferredChain: "ISRG Root X1"
