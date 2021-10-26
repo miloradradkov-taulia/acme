@@ -12,7 +12,7 @@ spec:
     # Name of a secret used to store the ACME account private key
     privateKeySecretRef:
       name: letsencrypt-prod
-    preferedChain: "{{ .Values. issuer.preferredChain }}"
+    preferedChain: "{{ .Values.issuer.preferredChain }}"
     solvers:
     - selector:
         dnsNames:
