@@ -19,7 +19,7 @@ spec:
         dnsNames:
         - "*.{{ .Values.jxRequirements.ingress.domain }}"
         - "{{ .Values.jxRequirements.ingress.domain }}"
-        -  "*.staging.{{ (split "." .Values.deployment.domain)._1 }}.com"
+        - "*.staging.{{ (split "." .Values.deployment.domain)._1 }}.com"
         - "staging.{{ (split "." .Values.deployment.domain)._1 }}.com"
       # ACME DNS-01 provider configurations
       dns01:
