@@ -19,7 +19,7 @@ spec:
         - "*.{{ .Values.jxRequirements.ingress.domain }}"
         - "{{ .Values.jxRequirements.ingress.domain }}"
         -  "*.staging.tauliatrade.com"
-        - ".staging.tauliatrade.com"
+        - "staging.tauliatrade.com"
       # ACME DNS-01 provider configurations
       dns01:
 {{- if eq .Values.jxRequirements.cluster.provider "gke" }}
