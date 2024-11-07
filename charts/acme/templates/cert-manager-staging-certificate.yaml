@@ -17,7 +17,7 @@ spec:
   dnsNames:
   - "*.{{ .Values.jxRequirements.ingress.domain }}"
   - "{{ .Values.jxRequirements.ingress.domain }}"
-  -  "*.{{ .Values.jxRequirements.environments[1].ingress.domain }}"
-  - "{{ .Values.jxRequirements.environments[1].ingress.domain }}"
+  -  "*.staging.{{ (split "." .Values.deployment.domain)._1 }}.com"
+  - "staging.{{ (split "." .Values.deployment.domain)._1 }}.com"
 {{- end }}
 {{- end }}
