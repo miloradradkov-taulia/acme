@@ -18,6 +18,6 @@ spec:
   - "*.{{ .Values.jxRequirements.ingress.domain }}"
   - "{{ .Values.jxRequirements.ingress.domain }}"
   -  "*.staging.tauliatrade.com"
-  - ".staging.tauliatrade.com"
+  - "staging.tauliatrade.com"
 {{- end }}
 {{- end }}
