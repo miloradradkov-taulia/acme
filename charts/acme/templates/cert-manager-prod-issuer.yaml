@@ -17,7 +17,9 @@ spec:
     - selector:
         dnsNames:
         - "*.{{ .Values.jxRequirements.ingress.domain }}"
-        - "{{ .Values.jxRequirements.ingress.domain }}"
+        - "{{ .Values.jxRequirements.ingress.domain }}"       
+        - "*.staging.{{ (split "." .Values.jxRequirements.ingress.domain)._1 }}.com"
+        - "staging.{{ (split "." .Values.jxRequirements.ingress.domain)._1 }}.com"
       # ACME DNS-01 provider configurations
       dns01:
 {{- if eq .Values.jxRequirements.cluster.provider "gke" }}
